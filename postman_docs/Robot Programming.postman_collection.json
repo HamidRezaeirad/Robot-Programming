@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "6964597e-13a6-428b-a3f8-bf11e81cb73a",
+		"name": "Robot Programming",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3509814"
+	},
+	"item": [
+		{
+			"name": "Walk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dimension\": \"3 3\",\n    \"position\": \"2 2 N\",\n    \"commands\": \"FFLFFRF\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/robots",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"robots"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
