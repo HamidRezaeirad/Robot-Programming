@@ -1,11 +1,14 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsString, Matches } from 'class-validator';
+import { validation } from '../../messages/robots.message';
+
+const { commands, dimension, position } = validation;
 
 export class RobotDto {
   @IsNotEmpty()
   @IsString()
   @Matches(/^[\d][\s][\d]$/, {
-    message: "dimension's input is not correct! Should be like 5 6",
+    message: dimension,
   })
   @ApiProperty({
     description: 'The dimension of the room, like 5 5',
@@ -15,7 +18,7 @@ export class RobotDto {
   @IsString()
   @IsNotEmpty()
   @Matches(/^[\d][\s][\d][\s][N|S|E|W]$/, {
-    message: "position's input is not correct! Should be like 1 2 N (N|E|S|W)",
+    message: position,
   })
   @ApiProperty({
     description: 'The initial position of the robot, like 1 2 N',
@@ -25,7 +28,7 @@ export class RobotDto {
   @IsString()
   @IsNotEmpty()
   @Matches(/^[R|L|F]*$/, {
-    message: 'commands not found! The accepted inputs: R|L|F',
+    message: commands,
   })
   @ApiProperty({
     description: 'The command that walks the robot, like RFRFFRFRF',

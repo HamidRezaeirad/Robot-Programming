@@ -2,6 +2,8 @@ import { Report } from 'src/interfaces';
 import { RobotDto } from 'src/robots/models/robots.dto';
 
 export const successReport201: Report = { result: '3 1 E' };
+export const failedRobotDto500Body = 'Out of bounds at 0 -1';
+export const successReport201Body = '3 1 E';
 
 export const successRobotDto201: RobotDto = {
   dimension: '5 5',
@@ -28,7 +30,7 @@ export const failedRobotDtoPosition400: RobotDto = {
 };
 
 export const failedRobotDtoCommands400: RobotDto = {
-  dimension: '3 ',
+  dimension: '3 3',
   position: '2 2 N',
   commands: 'FF33LFFRF',
 };
