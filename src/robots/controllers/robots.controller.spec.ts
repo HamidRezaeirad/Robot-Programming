@@ -1,6 +1,6 @@
 import { Test } from '@nestjs/testing';
 import { Report } from 'src/interfaces';
-import { RobotDto } from '../models/robots-dto';
+import { RobotDto } from '../models/robots.dto';
 import { RobotsService } from '../services/robots.service';
 import { RobotsController } from './robots.controller';
 

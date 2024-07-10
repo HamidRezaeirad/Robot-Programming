@@ -1,3 +1,3 @@
-export * from './dimension';
-export * from './position';
-export * from './report';
+export * from './dimension.interface';
+export * from './position.interface';
+export * from './report.interface';

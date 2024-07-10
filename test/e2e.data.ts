@@ -1,5 +1,5 @@
 import { Report } from 'src/interfaces';
-import { RobotDto } from 'src/robots/models/robots-dto';
+import { RobotDto } from 'src/robots/models/robots.dto';
 
 export const successReport201: Report = { result: '3 1 E' };
 
