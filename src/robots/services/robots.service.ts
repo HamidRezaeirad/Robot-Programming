@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Command, Direction } from '../../enums';
 import { InternalServerError } from '../../errors';
 import { Dimension, Position, Report } from '../../interfaces';
-import { RobotDto } from '../models/robots-dto';
+import { RobotDto } from '../models/robots.dto';
 
 @Injectable()
 export class RobotsService {

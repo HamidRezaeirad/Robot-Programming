@@ -1,6 +1,6 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { Report } from '../../interfaces';
-import { RobotDto } from '../models/robots-dto';
+import { RobotDto } from '../models/robots.dto';
 import { RobotsService } from '../services/robots.service';
 
 @Controller('robots')
