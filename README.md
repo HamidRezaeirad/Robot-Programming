@@ -91,7 +91,9 @@ $ npm run test:cov
 
 <img src="./assets/test.png" width="500"> 
 <br>
-<img src="./assets/e2e.test.png" width="500">
+<img src="./assets/test.e2e.png" width="500">
+<br>
+<img src="./assets/test.cov.png" width="500">
 
 ## API Document
 
