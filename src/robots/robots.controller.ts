@@ -8,7 +8,7 @@ export class RobotsController {
   constructor(private robotsService: RobotsService) {}
 
   /**
-   * Walk forward a Robot entity
+   * walk forward a Robot entity
    *
    * @param RobotDto
    * @return string instance

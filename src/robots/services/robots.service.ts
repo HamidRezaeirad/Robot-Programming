@@ -7,7 +7,7 @@ import { RobotDto } from '../models/robots-dto';
 @Injectable()
 export class RobotsService {
   /**
-   * Walk forward a Robot entity
+   * walk forward a Robot entity
    *
    * @param RobotDto
    * @returns string instance
@@ -15,7 +15,7 @@ export class RobotsService {
   walk(robotDto: RobotDto): Report {
     const { dimension, position, commands } = robotDto;
     const { row, column } = this.extractRoomDimension(dimension);
-    let extractPosition = this.extractPosition(position);
+    let extractPosition: Position = this.extractPosition(position);
 
     for (const command of commands) {
       extractPosition = this.move(extractPosition, command);
@@ -26,7 +26,14 @@ export class RobotsService {
     return { result: `${x} ${y} ${Direction[direction]}` };
   }
 
-  move(position: Position, command: string) {
+  /**
+   * move the Robot or change the direction
+   *
+   * @param Position
+   * @param Command
+   * @returns Position instance
+   */
+  move(position: Position, command: string): Position {
     let { x, y, direction } = position;
     switch (command) {
       case Command.Turn_Right:
@@ -58,6 +65,12 @@ export class RobotsService {
     return { x, y, direction };
   }
 
+  /**
+   * Extract x, y, and direction from position
+   *
+   * @param position
+   * @returns Position instance
+   */
   extractPosition(position: string): Position {
     const positionnArray = position.split(' ');
     const x = parseInt(positionnArray[0]);
@@ -66,6 +79,12 @@ export class RobotsService {
     return { x, y, direction };
   }
 
+  /**
+   * Extract row and column from dimension
+   *
+   * @param dimension
+   * @returns Dimension instance
+   */
   extractRoomDimension(dimension: string): Dimension {
     const dimensionArray = dimension.split(' ');
     const row = parseInt(dimensionArray[0]);
